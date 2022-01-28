@@ -1,0 +1,20 @@
+<html>
+    <body>
+        <script src="weather.js"></script>
+        
+        <p id="text"></p>
+        <script>
+            (async () => {
+                var weather = await getCurrentWeather(true);
+                
+                document.getElementById("text").innerHTML = 
+                    "Current temperature: " + weather.current + 
+                    "<br>High: " + weather.high + 
+                    "<br>Low: " + weather.low + 
+                    "<br>Condition: " + weather.condition +
+                    "<br>Humidity: " + weather.humidity + 
+                    "<br>Wind: " + weather.wind;
+            })();
+        </script>
+    </body>
+</html>
